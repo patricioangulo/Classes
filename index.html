@@ -16,12 +16,28 @@
     <script>
         class Client {
             //Setup
-            constructor() {
+            constructor(_name, _age, _color) {
                 console.log(`The client is being created!`)
+
+                this.name = _name
+                this.age = _age
+                this.color = _color
+
             }
+
+            getNickname() {
+                return `${this.name}${this.age}${this.color}`
+            }
+
+
+
+
         }
-        let client1 = new Client()
-        let client2 = new Client()
+        let client1 = new Client('see', 33, 'blue')
+        let client2 = new Client('topa', 500, 'pink')
+
+        console.log(client1.getNickname())
+        console.log(client2.getNickname())
     </script>
 </body>
 
