@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="#">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -25,10 +26,17 @@
 
             }
 
-            getNickname() {
+            // getNickname() {
+            //     return `${this.name}${this.age}${this.color}`
+            // }
+
+            get nickname() {
                 return `${this.name}${this.age}${this.color}`
             }
 
+            set nickname(age) {
+                this.age = age
+            }
 
 
 
@@ -36,8 +44,9 @@
         let client1 = new Client('see', 33, 'blue')
         let client2 = new Client('topa', 500, 'pink')
 
-        console.log(client1.getNickname())
-        console.log(client2.getNickname())
+        client1.age = 25
+        console.log(client1.nickname)
+        console.log(client2.nickname)
     </script>
 </body>
 
