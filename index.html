@@ -47,6 +47,42 @@
         client1.age = 25
         console.log(client1.nickname)
         console.log(client2.nickname)
+
+
+        class Person {
+
+            constructor(_name, _age, _health) {
+                this.name = _name
+                this.age = _age
+                this.health = _health
+            }
+
+            greeting() {
+                console.log(`Hi!, my name is ${this.name}`)
+            }
+
+        }
+
+
+        class Warrior extends Person {
+            constructor(_name, _age, _health, _strength, _distance) {
+                super(_name, _age, _health)
+                this.strength = _strength //number
+                this.distance = _distance //true or false
+                this.class = 'Warrior'
+            }
+
+            // greeting()
+            about() {
+                console.log(`I'm a ${this.class} and my strong is over ${this.strength}`)
+            }
+        }
+
+
+        let warrior1 = new Warrior('Curry', 33, 100, 100, true)
+        let warrior2 = new Warrior('Thompson', 30, 80, 80, true)
+        warrior1.greeting()
+        warrior1.about()
     </script>
 </body>
 
