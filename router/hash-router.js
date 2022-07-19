@@ -1,5 +1,6 @@
 import { name } from './../modules/square.js'
 import { pickATeam } from './../modules/pick_a_team.js'
+import { pickARole } from './../modules/pick_a_role.js'
 const pageTitle = 'Basket Tactics'
 // create an object that maps the url to the template, title, and description
 const routes = {

@@ -70,7 +70,7 @@ class SelectClass {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 Swal.fire({
-                    titel: 'Saved!',
+                    title: 'Saved!',
                     text: '',
                     icon: 'success',
                     didClose: () => {
