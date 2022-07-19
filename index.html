@@ -63,7 +63,6 @@
 
         }
 
-
         class Warrior extends Person {
             constructor(_name, _age, _health, _strength, _distance) {
                 super(_name, _age, _health)
@@ -75,6 +74,25 @@
             // greeting()
             about() {
                 console.log(`I'm a ${this.class} and my strong is over ${this.strength}`)
+            }
+        }
+
+        class Laker extends Person {
+            constructor(_name, _age, _health, _magic, _distance){
+                super(_name, _age, _health)
+                this.magic = _magic
+                this.distance = _distance
+                this.class = 'Laker'
+            }
+
+        }
+
+        class Heat extends Person {
+            constructor(_name, _age, _health, _fire, _distance){
+                super(_name, _age, _health)
+                this.fire = _fire
+                this.distance = _distance
+                this.class = 'Heat'
             }
         }
 
