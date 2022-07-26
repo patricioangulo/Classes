@@ -1,107 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <meta name="description" content="" />
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" href="style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="#">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <script>
-        class Client {
-            //Setup
-            constructor(_name, _age, _color) {
-                console.log(`The client is being created!`)
-
-                this.name = _name
-                this.age = _age
-                this.color = _color
-
-            }
-
-            // getNickname() {
-            //     return `${this.name}${this.age}${this.color}`
-            // }
-
-            get nickname() {
-                return `${this.name}${this.age}${this.color}`
-            }
-
-            set nickname(age) {
-                this.age = age
-            }
-
-
-
-        }
-        let client1 = new Client('see', 33, 'blue')
-        let client2 = new Client('topa', 500, 'pink')
-
-        client1.age = 25
-        console.log(client1.nickname)
-        console.log(client2.nickname)
-
-
-        class Person {
-
-            constructor(_name, _age, _health) {
-                this.name = _name
-                this.age = _age
-                this.health = _health
-            }
-
-            greeting() {
-                console.log(`Hi!, my name is ${this.name}`)
-            }
-
-        }
-
-        class Warrior extends Person {
-            constructor(_name, _age, _health, _strength, _distance) {
-                super(_name, _age, _health)
-                this.strength = _strength //number
-                this.distance = _distance //true or false
-                this.class = 'Warrior'
-            }
-
-            // greeting()
-            about() {
-                console.log(`I'm a ${this.class} and my strong is over ${this.strength}`)
-            }
-        }
-
-        class Laker extends Person {
-            constructor(_name, _age, _health, _magic, _distance){
-                super(_name, _age, _health)
-                this.magic = _magic
-                this.distance = _distance
-                this.class = 'Laker'
-            }
-
-        }
-
-        class Heat extends Person {
-            constructor(_name, _age, _health, _fire, _distance){
-                super(_name, _age, _health)
-                this.fire = _fire
-                this.distance = _distance
-                this.class = 'Heat'
-            }
-        }
-
-
-        let warrior1 = new Warrior('Curry', 33, 100, 100, true)
-        let warrior2 = new Warrior('Thompson', 30, 80, 80, true)
-        warrior1.greeting()
-        warrior1.about()
-    </script>
-</body>
-
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <div id="navbar"></div>
+    <div id="content"></div>
+    <body>
+        <script type="module" src="router/hash-router.js"></script>
+        <script src="lib/sweetalert2.all.min.js"></script>
+    </body>
 </html>
